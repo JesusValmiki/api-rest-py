@@ -1,0 +1,37 @@
+<header class="header">
+    <nav class="navbar">
+        <h1 class="logo">Postres Las Delicias</h1>
+        <ul class="menu">
+          <li>
+            <a href="{% url 'index' %}"
+            class="
+            {% if request.resolver_match.url_name == 'index' %} activa {% endif %}">
+            Inicio
+            </a>
+          </li>
+
+          <li>
+            <a href="{% url 'contacto' %}"
+            class="
+                    {% if request.resolver_match.url_name == 'contacto' %}
+                    activa
+                    {% endif %}">
+            Contacto
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'clientes' %}"
+            class="{% if request.resolver_match.url_name == 'clientes' %}activa
+            {% endif %}">Clientes
+            </a>
+          </li>
+        </ul>
+    </nav>
+</header>
+
+
+{% comment %}
+
+Lo que este dentro de este bloque se va a considerar como un comentario.
+
+{% endcomment %}
